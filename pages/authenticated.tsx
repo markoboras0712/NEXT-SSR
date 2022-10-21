@@ -1,6 +1,6 @@
 import React from "react";
 import nookies from "nookies";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import { firebaseAdmin } from "../firebaseAdmin";
 import { firebaseClient } from "../firebaseClient";
 
@@ -26,6 +26,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     // either the `token` cookie didn't exist
     // or token verification failed
     // either way: redirect to the login page
+    console.log("redirect to login page");
     return {
       redirect: {
         permanent: false,

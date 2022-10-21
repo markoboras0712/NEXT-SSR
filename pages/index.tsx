@@ -1,13 +1,13 @@
-import React, { useEffect, useCallback } from 'react';
-import Link from 'next/link';
-import { useAuth } from '../auth';
+import Link from "next/link";
+import React from "react";
+import { useAuth } from "../auth";
 
 export default () => {
   const { user } = useAuth();
 
   return (
-    <div style={{ padding: '40px' }}>
-      <p>{`User ID: ${user ? user.uid : 'no user signed in'}`}</p>
+    <div style={{ padding: "40px" }}>
+      <p>{`User ID: ${user ? user.uid : "no user signed in"}`}</p>
 
       <p>
         <Link href="/authenticated">
